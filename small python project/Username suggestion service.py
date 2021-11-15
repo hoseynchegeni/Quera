@@ -7,6 +7,8 @@ class person:
        self.last = last
        self.birthyear = birthyear
        self.username = username
+    def Email(self):
+        return (f'{username}@gmail.com')
 
 person_1 = person
 print("Welcome")
@@ -31,7 +33,10 @@ for i in Suggested_username:
     print('---------')
     print(f'{loop_counter}: {i}')
     loop_counter+=1
-username = input('Which username you want?')
+choice = int(input('Which username you want?'))
+username =Suggested_username[choice-1]
+person_1.username = username
+print('-----------------------')
 print('Successfully registered')
-
-
+print('------------------------')
+print(f'new user whit username: {person_1.username}, name {person_1.first} {person_1.last}, Email: {person.Email(person_1)}')
